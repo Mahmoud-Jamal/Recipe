@@ -1,0 +1,13 @@
+
+<div class=" sm:ml-64 bg-gray-200 p-16">
+  <div class="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-20 gap-x-10">
+    @for (item of data; track $index) {
+      <div class="card p-5 bg-amber-50 rounded-4xl text-center hover:scale-115 transition-all duration-300 group hover:shadow-2xl">
+        <img [src]="item.strMealThumb" alt="" class=" group-hover:-translate-y-1/4 rounded-full mx-auto group-hover:rotate-360 transition-all duration-500 shadow-2xl">
+        <h2 class="mb-4">{{item.strMeal.split(" ",2).join(" ")}}</h2>
+        <button class="py-2 px-5 bg-green-600 rounded-4xl text-white hover:scale-120 transition-all duration-300 cursor-pointer" routerLink="/details/{{item.idMeal}}">View Recipe</button>
+      </div>
+    }
+  </div>
+  <div class="card "></div>
+</div>

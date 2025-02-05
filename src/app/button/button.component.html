@@ -1,0 +1,23 @@
+<div class="p-4 sm:ml-64 bg-gray-200 ">
+  <div class="p-4  dark:border-gray-700">
+    <h1 class="font-['Pacifico',_serif] text-4xl text-orange-400 bg-gradient-to-r from-amber-400 to-red-700 bg-clip-text text-transparent " >Learn, Cook, Eat Your Food</h1>
+
+
+</div>
+
+<div class="mt-5 border-b border-gray-400">
+  <button  class="btn-style cursor-pointer border-0 bg-white" routerLink="/" >
+    All
+  </button>
+  @for (item of data; track $index) {
+    <button  class="btn-style m-2 cursor-pointer" routerLinkActive="bg-black text-white" routerLink="category/{{item.strCategory}}">
+      {{item.strCategory}}
+    </button>
+  }
+
+
+</div>
+</div>
+
+
+

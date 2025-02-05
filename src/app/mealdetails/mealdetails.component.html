@@ -1,0 +1,36 @@
+<div class="sm:ml-64 bg-gray-200 p-7">
+  <h1 class="text-5xl font-['Pacifico',_serif] font-medium">{{data.strMeal}}</h1>
+<div class="grid lg:grid-cols-3 gap-5 mt-10">
+ <div>
+  <img [src]="data.strMealThumb" alt="" class="rounded-3xl">
+  <div class="btn flex justify-evenly my-7">
+    <a [href]="data.strYoutube" target="_blank"><button class="bg-red-600 py-2 px-5 rounded-2xl cursor-pointer"><i class="fa-brands fa-youtube text-white "></i> youtube</button></a>
+  <a [href]="data.strSource" target="_blank"><button class="bg-green-600 py-2 px-5 rounded-2xl cursor-pointer"><i class="fa-brands fa-chrome text-white"></i> source</button></a>
+  </div>
+ </div>
+  <p>{{data.strInstructions}}</p>
+  <div class="bg-white rounded-3xl p-3">
+    <h2 class="border-b-5 border-gray-200 mb-6 pb-1 text-3xl">Ingredients</h2>
+
+        <div class="flex justify-between  mb-2">
+          <div class="">
+            @for (key of objectKeys(data).slice(9,27); track key) {
+
+              @if (data[key]) {
+            <p >{{data[key]}} :</p>
+          }
+        }
+          </div>
+         <div >
+           @for (key of objectKeys(data).slice(29,47); track key) {
+            @if (data[key]) {
+          <p >{{data[key]}}</p>}
+        }
+         </div>
+        </div>
+
+
+
+  </div>
+</div>
+</div>
