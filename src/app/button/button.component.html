@@ -4,8 +4,16 @@
 
 
 </div>
-
-<div class="mt-5 border-b border-gray-400">
+<div class="mt-5">
+  <select class="w-full py-3 px-8 rounded-xl border sm:hidden block" [(ngModel)]="selectedValue" (change)="onSelectChange()">
+    @for (item of data; track $index) {
+      <option value="{{item.strCategory}}" class="py-3 px-8 rounded-xl ">
+        {{item.strCategory}}
+      </option>
+    }
+  </select>
+</div>
+<div class="mt-5 border-b border-gray-400 hidden  sm:block ">
   <button  class="btn-style cursor-pointer border-0 bg-white" routerLink="/" >
     All
   </button>
